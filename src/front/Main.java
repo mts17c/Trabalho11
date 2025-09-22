@@ -169,8 +169,10 @@ public class Main {
         System.out.println("2) Consultar por uma conta corrente");
         System.out.println("3) Ativar um cliente");
         System.out.println("4) Desativar um cliente");
+        //Funcionalidades *
         System.out.println("5) Remover Conta");
         System.out.println("6) Transferir Valor");
+        //Funcionalidade Nova
         System.out.println("7) Cadastrar Cliente");
         System.out.println("8) Sair");
         System.out.println();
@@ -180,8 +182,8 @@ public class Main {
         List<ContaCorrente> contasDoBanco = new ArrayList<>();
         List<Cliente> clientesDoBanco = new ArrayList<>();
 
-        ContaCorrente conta01 = new ContaCorrente(1, 0, true);
-        ContaCorrente conta02 = new ContaCorrente(2, 0, true);
+        ContaCorrente conta01 = new ContaCorrente(1, 500, true);
+        ContaCorrente conta02 = new ContaCorrente(2, 700, true);
         contasDoBanco.add(conta01);
         contasDoBanco.add(conta02);
 

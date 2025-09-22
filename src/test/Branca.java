@@ -18,6 +18,11 @@ public class Branca {
     // Teste de fluxo de controle
     @Test
     public void testTransfereValorComSucesso() {
+    	// 1) Cria duas novas contas
+    	// 2) Adiciona em um vetor
+    	// 3) Passa o vetor para o Gerenciador de Contas
+    	// 4) Tenta transferir 200 da conta 1 para 2
+    	// 5) se conseguir, verifica os saldos se os saldos correspondem
         ContaCorrente origem = new ContaCorrente(1, 500, true);
         ContaCorrente destino = new ContaCorrente(2, 100, true);
         List<ContaCorrente> contas = Arrays.asList(origem, destino);
@@ -32,6 +37,11 @@ public class Branca {
 
     @Test
     public void testTransfereValorSaldoInsuficiente() {
+    	// 1) Cria duas novas contas
+    	// 2) Adiciona em um vetor
+    	// 3) Passa o vetor para o Gerenciador de Contas
+    	// 4) Tenta transferir 200 da conta 1 para 2
+    	// 5) se conseguir(nao vai), verifica os saldos se os saldos correspondem
         ContaCorrente origem = new ContaCorrente(1, 100, true);
         ContaCorrente destino = new ContaCorrente(2, 100, true);
         List<ContaCorrente> contas = Arrays.asList(origem, destino);
@@ -47,6 +57,18 @@ public class Branca {
     // Teste de loop
     @Test
     public void testPesquisaContaLoop() {
+    	// 1) Cria 3 contas em um vetor
+    	// 2) Passa o vetor para o Gerenciador de Contas
+    	// 3) Pesquisa pelo ID da conta na funcao pesquisaConta:
+        /*public ContaCorrente pesquisaConta(int idConta) {
+            for (ContaCorrente contaCorrente : contasDoBanco) {
+                if (contaCorrente.getId() == idConta)
+                    return contaCorrente;
+            }
+            return null;
+        }
+        */
+    	// 4) Se nao for nulo, verifica se os saldos correspondem
         List<ContaCorrente> contas = Arrays.asList(
             new ContaCorrente(1, 100, true),
             new ContaCorrente(2, 200, true),
